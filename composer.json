@@ -1,0 +1,21 @@
+{
+    "name": "kojrzanowski/lab-composer",
+    "type": "project",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Kojrzanowski\\LabComposer\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Konrad Ojrzanowski"
+        }
+    ],
+    "require": {
+        "../vendor/monolog/monolog": "^3.12"
+    },
+    "require-dev": {
+        "../vendor/symfony/maker-bundle": "^1.68"
+    }
+}
