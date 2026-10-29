@@ -1,0 +1,44 @@
+
+App\Entity\Location:
+    properties:
+        city:
+            - NotBlank:
+                  groups: [LocationCreate, LocationEdit]
+        country:
+            - NotBlank:
+                  groups: [LocationCreate, LocationEdit]
+
+        latitude:
+            - NotBlank:
+                  groups: [LocationCreate, LocationEdit]
+            - Range:
+                  min: -90
+                  max: 90
+                  groups: [LocationCreate, LocationEdit]
+
+        longitude:
+            - NotBlank:
+                  groups: [LocationCreate, LocationEdit]
+            - Range:
+                  min: -180
+                  max: 180
+                  groups: [LocationCreate, LocationEdit]
+
+
+App\Entity\Measurement:
+    properties:
+        date:
+            - NotNull:
+                  groups: [MeasurementCreate, MeasurementEdit]
+
+        celsius:
+            - NotNull:
+                  groups: [MeasurementCreate, MeasurementEdit]
+            - Range:
+                  min: -100
+                  max: 100
+                  groups: [MeasurementCreate, MeasurementEdit]
+
+        location:
+            - NotNull:
+                  groups: [MeasurementCreate, MeasurementEdit]
